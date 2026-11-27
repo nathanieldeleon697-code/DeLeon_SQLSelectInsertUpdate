@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B4BA1301-9F01-41C6-A02F-87C65BFA4DD8}</ProjectGuid>
+    <OutputType>WinExe</OutputType><RootNamespace>DeLeon_SQLSelectInsertUpdate</RootNamespace>
+    <AssemblyName>DeLeon_SQLSelectInsertUpdate</AssemblyName><TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>bin\Debug\</OutputPath><DefineConstants>DEBUG;TRACE</DefineConstants><WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType><Optimize>true</Optimize><OutputPath>bin\Release\</OutputPath><DefineConstants>TRACE</DefineConstants><WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup><Reference Include="System"/><Reference Include="System.Core"/><Reference Include="System.Data"/><Reference Include="System.Drawing"/><Reference Include="System.Windows.Forms"/><Reference Include="System.Xml"/></ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClubRegistrationQuery.cs"/>
+    <Compile Include="DatabaseSetup.cs"/>
+    <Compile Include="FrmClubRegistration.Designer.cs"><DependentUpon>FrmClubRegistration.cs</DependentUpon></Compile>
+    <Compile Include="FrmClubRegistration.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="FrmUpdateMember.Designer.cs"><DependentUpon>FrmUpdateMember.cs</DependentUpon></Compile>
+    <Compile Include="FrmUpdateMember.cs"><SubType>Form</SubType></Compile>
+    <Compile Include="MemberValidation.cs"/>
+    <Compile Include="Program.cs"/>
+    <Compile Include="Properties\AssemblyInfo.cs"/>
+    <EmbeddedResource Include="FrmClubRegistration.resx"><DependentUpon>FrmClubRegistration.cs</DependentUpon></EmbeddedResource>
+    <EmbeddedResource Include="FrmUpdateMember.resx"><DependentUpon>FrmUpdateMember.cs</DependentUpon></EmbeddedResource>
+    <None Include="App.config"/>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+</Project>
